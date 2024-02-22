@@ -74,7 +74,13 @@ PLUGINLIB_EXPORT_CLASS(polygon_plugins::Square, polygon_base::RegularPolygon)
 
 ## 编译方法
 
-```
+```shell
 mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+git clone https://github.com/LadissonLai/learning_pluginlib.git
+cd ~/catkin_ws
+catkin_make
+source ./devel/setup.bash
+rosrun core_pack polygon_loader
 ```
 
