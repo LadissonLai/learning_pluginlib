@@ -49,6 +49,7 @@ PLUGINLIB_EXPORT_CLASS(polygon_plugins::Square, polygon_base::RegularPolygon)
 <exec_depend>core_pack</exec_depend>
 
 <!-- 这里相当于导出插件，core_pack是父类的功能包 -->
+<!-- 这句话会把该功能包的插件注册进 core_pack 功能包中-->
 <export>
   <core_pack plugin="${prefix}/polygon_plugins.xml" />
 </export>
@@ -82,5 +83,12 @@ cd ~/catkin_ws
 catkin_make
 source ./devel/setup.bash
 rosrun core_pack polygon_loader
+```
+
+## 查询core_pack功能包的插件
+
+```shell
+rospack plugins --attrib=plugin core_pack
+# 这里会返回polygon_plugins.xml的绝对路径。
 ```
 
