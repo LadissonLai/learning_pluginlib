@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
   ros::init(argc, argv, "example_node");
   // 类加载器 -- 参数1:基类功能包名称 参数2:基类全限定名称
   pluginlib::ClassLoader<polygon_base::RegularPolygon> poly_loader(
-      "learning_pluginlib", "polygon_base::RegularPolygon");
+      "core_pack", "polygon_base::RegularPolygon");
 
   try {
     // 创建插件类实例 -- 参数:插件类全限定名称

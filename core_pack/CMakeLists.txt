@@ -12,8 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
 )
 
-add_executable(polygon_loader src/polygon_loader.cpp)
-target_link_libraries(polygon_loader ${catkin_LIBRARIES})
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -121,6 +120,8 @@ include_directories(
   include
   ${catkin_INCLUDE_DIRS}
 )
+add_executable(polygon_loader src/polygon_loader.cpp)
+target_link_libraries(polygon_loader ${catkin_LIBRARIES})
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
@@ -145,7 +146,7 @@ include_directories(
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-add_dependencies(polygon_loader ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(polygon_loader ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
